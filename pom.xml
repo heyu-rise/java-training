@@ -12,6 +12,7 @@
 
     <modules>
         <module>week01jvm</module>
+        <module>week02gcnio</module>
     </modules>
 
 </project>
