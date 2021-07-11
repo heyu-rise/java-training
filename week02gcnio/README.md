@@ -1,7 +1,7 @@
 # java-training
 > Java训练营作业
 
-## week01第一周作业
+## week01第二周作业
 
 #### 1、使用 HttpClient 或 OkHttp访问 [http://127.0.0.1:8801](http://127.0.0.1:8801)
 

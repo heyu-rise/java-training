@@ -1,0 +1,13 @@
+port: 8888
+routes:
+  - id: httpbinlocal
+    uri:
+      - http://127.0.0.1
+      - http://127.0.0.1:8080
+    path: /httpbinlocal/**
+    stripPrefix: 1
+  - id: httpbinremote
+    uri:
+      - http://www.httpbin.org
+    path: /httpbinremote/**
+    stripPrefix: 1

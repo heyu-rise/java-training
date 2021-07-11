@@ -13,6 +13,7 @@
     <modules>
         <module>week01jvm</module>
         <module>week02gcnio</module>
+        <module>week03nioconcurrent</module>
     </modules>
 
 </project>

@@ -28,8 +28,8 @@ public class WithHttpClient {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         try {
             HttpRequestBase httpRequestBase = new HttpGet(url);
-            RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(60000)
-                    .setConnectionRequestTimeout(1000).setSocketTimeout(60000).build();
+            RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(30000)
+                    .setConnectionRequestTimeout(1000).setSocketTimeout(30000).build();
             httpRequestBase.setConfig(requestConfig);
             // 执行get请求.
             CloseableHttpResponse response = httpClient.execute(httpRequestBase);
