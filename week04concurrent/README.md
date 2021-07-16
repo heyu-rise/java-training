@@ -7,8 +7,13 @@
 ```http
 https://github.com/heyu-rise/java-training/blob/main/week04concurrent/src/main/java/Homework.java
 ```
+### 作业6
+
 > 把多线程和并发相关知识梳理一遍，画一个脑图
 
 ```http
 https://github.com/heyu-rise/java-training/blob/main/week04concurrent/src/main/resources/concurrent.jpg
 ```
+
+![](https://github.com/heyu-rise/java-training/blob/main/week04concurrent/src/main/resources/concurrent.jpg?raw=true)
+
