@@ -15,6 +15,7 @@
         <module>week02gcnio</module>
         <module>week03nioconcurrent</module>
         <module>week04concurrent</module>
+        <module>week05</module>
     </modules>
 
 </project>
