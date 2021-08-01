@@ -3,7 +3,7 @@
 #### **6**、基于电商交易场景（用户、商品、订单），设计一套简单的表结构
 
 ```http
-https://github.com/heyu-rise/java-training/tree/main/week06/src/main/resources/week06.sql
+https://github.com/heyu-rise/java-training/blob/main/week06/week06.sql
 ```
 
 ```sql
