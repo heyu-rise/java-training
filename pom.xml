@@ -17,6 +17,7 @@
         <module>week04concurrent</module>
         <module>week05</module>
         <module>week06</module>
+        <module>week07</module>
     </modules>
 
 </project>
