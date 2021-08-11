@@ -18,4 +18,8 @@ public class SqlTypeUtils {
         return threadLocal.get();
     }
 
+    public static void remove(){
+        threadLocal.remove();
+    }
+
 }

@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -31,7 +32,7 @@ public class SqlTypeAop {
 	}
 
 	@Before("sqlType()")
-	public void aroundLog(JoinPoint point) {
+	public void before(JoinPoint point) {
 		MethodSignature sign = (MethodSignature) point.getSignature();
 		Method method = sign.getMethod();
 		SqlType sqlType = method.getAnnotation(SqlType.class);
@@ -43,4 +44,8 @@ public class SqlTypeAop {
 		}
 	}
 
+	@After("sqlType()")
+	public void after(JoinPoint point) {
+		SqlTypeUtils.remove();
+	}
 }
