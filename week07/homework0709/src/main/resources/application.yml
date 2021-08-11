@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    db1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3307/week06?useSSL=false
+      username: root
+      password: mn814561293
+      type: com.zaxxer.hikari.HikariDataSource
+    db2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3308/week06?useSSL=false
+      username: root
+      password: mn814561293
+      type: com.zaxxer.hikari.HikariDataSource
+
+mybatis:
+  mapper-locations: classpath:mapper/*xml
