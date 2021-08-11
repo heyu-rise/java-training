@@ -1,0 +1,27 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: master,slave0
+      master:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/week06?useSSL=false
+        username: root
+        password: mn814561293
+        type: com.zaxxer.hikari.HikariDataSource
+      slave0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3308/week06?useSSL=false
+        username: root
+        password: mn814561293
+        type: com.zaxxer.hikari.HikariDataSource
+    masterslave:
+      load-balance-algorithm-type: round_robin
+      master-data-source-name: master
+      name: ms
+      slave-data-source-names: slave0
+    props:
+      sql:
+        show: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*xml

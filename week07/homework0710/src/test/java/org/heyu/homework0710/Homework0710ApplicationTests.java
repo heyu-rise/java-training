@@ -1,7 +1,7 @@
-package org.heyu.homework0709;
+package org.heyu.homework0710;
 
-import org.heyu.homework0709.model.Order;
-import org.heyu.homework0709.service.IOrderService;
+import org.heyu.homework0710.model.Order;
+import org.heyu.homework0710.service.IOrderService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootTest
-class Homework0709ApplicationTests {
+class Homework0710ApplicationTests {
 
 	@Autowired
 	IOrderService orderService;
