@@ -1,0 +1,22 @@
+server:
+  port: 6802
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3308/week08?useSSL=false
+    username: root
+    password: mn814561293
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      minimum-idle: 50
+      maximum-pool-size: 100
+      idle-timeout: 30000
+      pool-name: jsp-cp
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+mybatis:
+  mapper-locations: classpath:mapper/*xml
+

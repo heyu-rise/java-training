@@ -1,0 +1,38 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: g1,g2
+      g1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/week08?useSSL=false
+        username: root
+        password: mn814561293
+        type: com.zaxxer.hikari.HikariDataSource
+      g2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3308/week08?useSSL=false
+        username: root
+        password: mn814561293
+        type: com.zaxxer.hikari.HikariDataSource
+    sharding:
+      tables:
+        order:
+          actual-data-nodes: g$->{1..2}.order_$->{1..16}
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+          database-strategy:
+            inline:
+              sharding-column: user_id
+              algorithm-expression: g$->{user_id % 2 + 1}
+          table-strategy:
+            inline:
+              sharding-column: id
+              algorithm-expression: order_$->{id % 16 + 1}
+    props:
+      sql:
+        show:true
+
+mybatis:
+  mapper-locations: classpath:mapper/*xml
+

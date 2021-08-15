@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: heyu-order-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:6800/eureka/
+  instance:
+    prefer-ip-address: true
+    #客户端向服务端发送心跳的间隔时间，默认为10秒
+    leaseRenewalIntervalInSeconds: 10
+    #服务端在收到最后最后一次心跳之后的等待时间上限，超过该时间将被剔除，默认为30秒
+    leaseExpirationDurationInSeconds: 30
