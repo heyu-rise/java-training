@@ -24,4 +24,16 @@ public interface IOrderService {
 	 */
 	Order getOrder(long id);
 
+	/**
+	 * 修改订单
+	 * @return
+	 */
+	int modifyOrder();
+
+	/**
+	 * 删除订单
+	 * @return
+	 */
+	int deleteOrder();
+
 }

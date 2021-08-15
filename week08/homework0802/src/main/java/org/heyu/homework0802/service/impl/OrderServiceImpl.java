@@ -44,7 +44,24 @@ public class OrderServiceImpl implements IOrderService {
 
 	@Override
 	public Order getOrder(long id) {
-
 		return orderMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public int modifyOrder() {
+		Long  a = new Long("c");
+		Order order = orderMapper.selectByPrimaryKey(a);
+		if (order == null) {
+			return 0;
+		}
+		order.setCost(new BigDecimal(100));
+		order.setUpdateTime(null);
+		order.setUserId(null);
+		return orderMapper.updateByPrimaryKeySelective(order);
+	}
+
+	@Override
+	public int deleteOrder() {
+		return orderMapper.deleteByPrimaryKey(33L);
 	}
 }

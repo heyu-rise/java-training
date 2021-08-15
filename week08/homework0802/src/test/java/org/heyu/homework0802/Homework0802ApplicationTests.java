@@ -32,8 +32,18 @@ class Homework0802ApplicationTests {
 
 	@Test
 	void sqlType2() {
-		Order order = orderService.getOrder(1L);
+		Order order = orderService.getOrder(633665885030056126l);
 		log.info(order.getAddress());
+	}
+
+	@Test
+	void sqlType3() {
+		log.info(String.valueOf(orderService.modifyOrder()));
+	}
+
+	@Test
+	void sqlType4() {
+		orderService.deleteOrder();
 	}
 
 	@Test
