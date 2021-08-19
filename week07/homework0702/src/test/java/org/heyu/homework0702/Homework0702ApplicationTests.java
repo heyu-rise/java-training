@@ -15,11 +15,20 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @SpringBootTest
 class Homework0702ApplicationTests {
 
 	@Autowired
 	private OrderMapper orderMapper;
+
+	@Test
+	void select(){
+		Order order = orderMapper.selectByPrimaryKey(633665602942140645L);
+		log.info(order.toString());
+	}
 
 	@Test
 	void insert1() {
@@ -49,7 +58,7 @@ class Homework0702ApplicationTests {
 		String dateStr = "20210804";
 		BigDecimal cost = new BigDecimal(1000);
 		Date date = new Date();
-		IntStream.range(0, 1000).parallel().forEach(ab -> {
+		IntStream.range(0, 10000).parallel().forEach(ab -> {
 			List<Order> orderList = new ArrayList<>(1000);
 			IntStream.range(ab * 1000, (ab + 1) * 1000).forEach(a -> {
 				Order order = new Order();

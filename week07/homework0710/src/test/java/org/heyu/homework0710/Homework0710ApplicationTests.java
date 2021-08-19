@@ -22,7 +22,7 @@ class Homework0710ApplicationTests {
 
 	@Test
 	void sqlType2() {
-		Order order = orderService.getOrder(1L);
+		Order order = orderService.getOrder(633665602942140645l);
 		log.info(order.getAddress());
 	}
 
