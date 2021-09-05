@@ -1,20 +1,18 @@
-package org.heyu.week11.lock;
+[TOC]
 
-import java.util.Objects;
+# 第11周作业说明
 
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Component;
+## 基于 Redis 封装分布式数据操作
 
-/**
- * @author heyu
- * @date 2021/9/5
- */
+### 1、在 Java 中实现一个简单的分布式锁
+
+```http
+https://github.com/heyu-rise/java-training/blob/main/week11/src/main/java/org/heyu/week11/lock/RedisLockAop.java
+```
+
+> 使用redis的原子自增方法，模拟信号量的方法实现
+
+```java
 @Aspect
 @Component
 public class RedisLockAop {
@@ -47,3 +45,18 @@ public class RedisLockAop {
     }
 
 }
+```
+
+### 2、在 Java 中实现一个分布式计数器，模拟减库存
+
+```http
+https://github.com/heyu-rise/java-training/blob/main/week11/src/main/java/org/heyu/week11/service/impl/RedisServiceImpl.java
+```
+
+  > 使用redis的原子自增方法
+
+```java
+stringRedisTemplate.opsForValue().increment("redis:count");
+stringRedisTemplate.opsForValue().decrement("redis:count");
+```
+

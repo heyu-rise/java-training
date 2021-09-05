@@ -27,6 +27,7 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public void test2() {
         stringRedisTemplate.opsForValue().increment("redis:count");
+        stringRedisTemplate.opsForValue().decrement("redis:count");
     }
 
 }
