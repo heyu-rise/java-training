@@ -8,6 +8,7 @@ import org.heyu.order.service.OrderService;
 import org.heyu.order.utils.SnowFlake;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2021/8/15
  */
 @RestController
+@RequestMapping("/order")
 public class HmilyController {
 
     @Autowired
@@ -26,7 +28,7 @@ public class HmilyController {
     public void test1(){
         String dateStr = "2021815";
         BigDecimal cost = new BigDecimal(1000);
-        Long a = 1999999L;
+        Long a = 3999999L;
         Date date = new Date();
         Order order = new Order();
         order.setId(SnowFlake.getInstance().nextId());
