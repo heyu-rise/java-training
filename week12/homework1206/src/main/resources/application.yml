@@ -1,0 +1,10 @@
+message:
+  queue:
+    host: 127.0.0.1
+server:
+  port: 8080
+spring:
+  activemq:
+    broker-url: tcp://${message.queue.host}:61616
+    password: admin
+    user: admin
