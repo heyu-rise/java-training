@@ -13,6 +13,8 @@
 
     <modules>
         <module>homework1301</module>
+        <module>homework1304</module>
+        <module>homework1306</module>
     </modules>
 
     <properties>

@@ -1,7 +1,8 @@
-package org.heyu.homework1301.kafka;
+package org.heyu.homework1304.kafka;
 
-import org.heyu.homework1301.model.User;
-import org.heyu.homework1301.utils.JsonUtil;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.heyu.homework1304.model.User;
+import org.heyu.homework1304.utils.JsonUtil;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +24,17 @@ public class KafkaConsumer {
 	@KafkaListener(topics = "heyu-string", groupId = "heyu2")
 	public void string2(String message) {
 		log.info(message);
+	}
+
+
+
+	@KafkaListener(topics = "heyu-string", groupId = "heyu3")
+	public void string2(ConsumerRecord<String, String> record) {
+		if (30L == record.offset()) {
+			throw new RuntimeException("!");
+		}
+		log.info(String.valueOf(record.offset()));
+		log.info(record.value());
 	}
 
 	@KafkaListener(topics = "heyu-object", groupId = "heyu-object1")

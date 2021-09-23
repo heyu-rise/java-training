@@ -8,10 +8,10 @@
         <version>1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>homework1206</artifactId>
+    <artifactId>homework1304</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>homework1206</name>
-    <description>homework1206</description>
+    <name>homework1304</name>
+    <description>homework1304</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -24,29 +24,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+        <!--kafka-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
         </dependency>
-
-        <!--activemq-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-activemq</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>
