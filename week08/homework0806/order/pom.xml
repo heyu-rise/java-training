@@ -61,7 +61,7 @@
         </dependency>
         <dependency>
             <groupId>org.heyu</groupId>
-            <artifactId>commom</artifactId>
+            <artifactId>common</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

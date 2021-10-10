@@ -2,13 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.8.RELEASE</version>
+        <relativePath/>
+    </parent>
 
+    <modelVersion>4.0.0</modelVersion>
     <groupId>org.heyu</groupId>
     <artifactId>java-training</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <name>java-training</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <modules>
         <module>week01jvm</module>
@@ -23,6 +33,7 @@
         <module>week11</module>
         <module>week12</module>
         <module>week13</module>
+        <module>week15</module>
     </modules>
 
     <dependencyManagement>
@@ -43,5 +54,55 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+    <repositories>
+        <repository>
+            <id>releases</id>
+            <url>https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/06ce67e7428010570f9fc00da4a6eae0_1_0/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <url>https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/06ce67e7428010570f9fc00da4a6eae0_2_0/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/06ce67e7428010570f9fc00da4a6eae0_1_0/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/06ce67e7428010570f9fc00da4a6eae0_2_0/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

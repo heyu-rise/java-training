@@ -9,11 +9,11 @@
         <relativePath/>
     </parent>
     <groupId>org.heyu</groupId>
-    <artifactId>commom</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>common</artifactId>
+    <packaging>jar</packaging>
     <version>1.0</version>
-    <name>commom</name>
-    <description>commom</description>
+    <name>common</name>
+    <description>common</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -58,8 +58,13 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
