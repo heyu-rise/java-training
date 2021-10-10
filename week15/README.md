@@ -14,7 +14,7 @@
 
 > `Java` 是一种面向对象、静态类型、编译执行， 有 VM/GC 和运行时、跨平台的高级语言，而`JVM`更是`Java`运行的基础环境，也是`Java`能跨平台的重要原因之一。`Java`语言编译程序只需生成在`JVM`上运行的目标代码，就可以在多种平台上不加修改地运行。`Java`虚拟机主要分为五大模块：类加载器、内存模型、执行引擎、本地方法接口和垃圾收集。
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/JVM.jpg?raw=true)
 
 ### 2、NIO
 
@@ -26,7 +26,7 @@
 
 > 最近几年，并发编程已经慢慢成为一项必备技能，这主要是硬件的驱动以及国内互联网行业的飞速发展决定的，大型互联网厂商的系统并发量轻松过百万，传统的中间件和数据库已经成了瓶颈。其实并发编程可以总结为三个核心问题：分工、同步、互斥。分工指的是如何高效地拆解任务并分配给线程，而同步指的是线程之间如何协作，互斥则是保证同一时刻只允许一个线程访问共享资源。Java SDK 并发包很大部分内容都是按照这三个维度组织的，例如 `Fork/Join` 框架就是一种分工模式，`CountDownLatch` 就是一种典型的同步方式，而可重入锁则是一种互斥手段。
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/concurrent.jpg?raw=true)
 
 ### 4、Spring 和 ORM 等框架
 
@@ -34,7 +34,7 @@
 >
 > 目前主流的`orm`框架有`spring data`，`MyBatis `，`hibernate`，而目前国内用的最多的时`MyBatis `和`MyBatis `的第三方插件，`MyBatis` 消除了几乎所有的`JDBC`代码和参数的手工设置以及结果集的检索。`MyBatis` 使用简单的 XML或注解用于配置和原始映射，将接口和 `Java` 的`POJOs`（`Plain Ordinary Java Objects`，普通的 `Java`对象）映射成数据库中的记录。
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/Spring.jpg?raw=true)
 
 ### 5、MySQL 数据库和 SQL
 
@@ -42,7 +42,7 @@
 >
 > `sql` 是一种特殊的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/MySQL.jpg?raw=true)
 
 ### 6、分库分表
 
@@ -52,7 +52,7 @@
 >
 > 从可用性的方面来讲，服务化的无状态型，能够达到较小成本的随意扩容，这必然导致系统的最终压力都落在数据库 之上。而单一的数据节点，或者简单的主从架构，已经越来越难以承担。从运维成本方面考虑，当一个数据库实例中 的数据达到阈值以上，数据备份和恢复的时间成本都将随着数据量的大小而愈发不可控。
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/sub-mysql.jpg?raw=true)
 
 ### 7、RPC 和微服务
 
@@ -60,7 +60,7 @@
 >
 > 微服务是一种软件开发技术- 面向服务的体系结构（SOA）架构样式的一种变体，它提倡将单一应用程序划分成一组小的服务，服务之间互相协调、互相配合，为用户提供最终价值。每个服务运行在其独立的进程中，服务于服务间采用轻量级的通信机制互相沟通（通常是基于HTTP的RESTful API）。每个服务都围绕着具体业务进行构建，并且能够独立地部署到生产环境、类生产环境等。另外，应尽量避免统一的、集中式的服务管理机制，对具体的一个服务而言，应根据上下文，选着合适的语言、工具对其进行构建。
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/Microservice.jpg?raw=true)
 
 ### 8、分布式缓存
 
@@ -68,7 +68,7 @@
 >
 > 分布式缓存首先也是缓存，一种性能很好但是相对稀缺的资源，和我们在课本上学习的CPU缓存原理基本相同，CPU是用性能更好的静态RAM来为性能一般的DRAM加速，分布式缓存则是通过内存或者其他高速存储来加速，但是由于用到了分布式环境中，涉及到并发和网络的问题，所以会更加复杂一些，但是有很多方面的共性，比如缓存淘汰策略。计算机行业有一句鼎鼎大名的格言就指出了缓存失效的复杂性
 
-
+![](https://github.com/heyu-rise/java-training/blob/main/week15/redis.jpg?raw=true)
 
 ### 9、分布式消息队列
 
